@@ -1,0 +1,109 @@
+:root{
+    --masonry-columns : 1;
+    --gif-item-size: 90vw;
+}
+
+* {
+font-family: Helvetica, Arial, sans-serif;
+color: #1c164b;
+}
+
+body {
+    padding: 10px;
+    background-color: rgb(238, 230, 230)
+}
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+input {
+background-color: white;
+border-radius: 5px;
+border: 1px solid #000;
+color: black;
+font-size: 1.2rem;
+outline: none;
+padding: 10px 15px;
+width: 80vw;
+max-width: 500px;
+margin: 10px;
+}
+h1{
+    font-size: 4rem;
+}
+h2 {
+font-size: 1.5rem;
+}
+
+h3 {
+font-size: 3rem;
+margin-bottom: 5px;
+}
+
+.gif_grid{
+    column-count: var(--masonry-columns);
+    padding: 0px auto;
+    margin-top: 50px;
+    min-height: 60vh;
+}
+
+.gif_grid--item{
+    width:var(--gif-item-size);
+    border-radius: 3px;
+    margin: 0px auto;
+}
+
+.loading-container{
+display:flex;
+flex-direction: column;
+height: 100vh;
+justify-content: center;
+align-items: center;
+
+}
+.ig-loading-bar{
+border: solid 2px #5745de;
+width: 280px;
+height: 8px;
+border-radius: 1.625rem;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.ig-loading-bar-inner{
+width: 25px;
+height: 6px;
+border-radius: 1.625rem;
+background-color: #5745de;
+margin: 0px 1.5px;
+position: relative;
+animation: loading .8s infinite alternate;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes loading {
+from {left: 0px;}
+to {left: 248px;}
+}
+
+@media screen and (min-width: 768px) {
+    :root{
+        --masonry-columns: 1;
+        --gif-item-size: 45vw;
+    }
+}
+@media screen and (min-width: 1024px) {
+    :root{
+        --masonry-columns: 4;
+        --gif-item-size: 23vw;
+    }
+}
+@media screen and (min-width: 1440px) {
+    :root{
+        --masonry-columns: 5;
+        --gif-item-size: 19vw;
+    }
+}
