@@ -11,6 +11,7 @@ export const GifWizardApp = () => {
             setSearchedQueries([query, ...searchedQueries])
         }
     }
+    
     return (
         <>
             <h1 style={{textAlign: "center"}}>GifWizard </h1>
